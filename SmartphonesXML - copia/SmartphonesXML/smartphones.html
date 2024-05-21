@@ -1,0 +1,173 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+                    table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    }
+
+                    th, td {
+                    text-align: left;
+                    padding: 8px;
+                    }
+
+                    tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                    }
+
+                    th {
+                    background-color: #4CAF50;
+                    color: white;
+                    }
+                </style>
+</head>
+<body>
+<h2>Total de personas que optaron por cada marca de tel&eacute;fono</h2>
+<table border="1">
+<tr>
+<th>Marca</th><th>Total</th>
+</tr>
+<tr>
+<td>Samsung</td><td>780</td>
+</tr>
+<tr>
+<td>Apple</td><td>650</td>
+</tr>
+<tr>
+<td>Xiaomi</td><td>990</td>
+</tr>
+<tr>
+<td>Sin preferencias</td><td>735</td>
+</tr>
+</table>
+<h2>Distribuci&oacute;n de preferencias por estado</h2>
+<table border="1">
+<tr>
+<th>Estado</th><th>Samsung</th><th>Apple</th><th>Xiaomi</th><th>Sin Preferencias</th>
+</tr>
+<tr>
+<td>New York</td><td>100</td><td>120</td><td>180</td><td>200</td>
+</tr>
+<tr>
+<td>Arizona</td><td>300</td><td>110</td><td>120</td><td>180</td>
+</tr>
+<tr>
+<td>Nuevo M&eacute;xico</td><td>130</td><td>200</td><td>380</td><td>130</td>
+</tr>
+<tr>
+<td>Florida</td><td>140</td><td>108</td><td>130</td><td>120</td>
+</tr>
+<tr>
+<td>Texas</td><td>110</td><td>112</td><td>180</td><td>105</td>
+</tr>
+</table>
+<h2>Porcentaje de preferencias por marca</h2>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="brandChart" width="400" height="200"></canvas>
+<script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var ctx = document.getElementById('brandChart').getContext('2d');
+                        var brandChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Samsung', 'Apple', 'Xiaomi'],
+                                datasets: [{
+                                    label: 'Porcentaje de Preferencias',
+                                    data: [
+                                        20.16,
+                                        16.80,
+                                        25.58
+                                    ],
+                                    backgroundColor: [
+                                        'rgba(54, 162, 235, 0.2)',
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(75, 192, 192, 1)'
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Porcentaje (%)'
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    }
+                                }
+                            }
+                        });
+                    });
+                </script>
+<h2>Porcentaje de personas inscritas por estado</h2>
+<canvas id="stateChart" width="200" height="200"></canvas>
+<script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var ctx = document.getElementById('stateChart').getContext('2d');
+                        var stateChart = new Chart(ctx, {
+                            type: 'doughnut',
+                            data: {
+                                labels: [
+                                    
+                                        'New York',
+                                    
+                                        'Arizona',
+                                    
+                                        'Nuevo México',
+                                    
+                                        'Florida',
+                                    
+                                        'Texas',
+                                    
+                                ],
+                                datasets: [{
+                                    label: 'Porcentaje de Inscritos por Estado',
+                                    data: [
+                                        15.503875968992247,
+                                            ,23.25581395348837,
+                                            ,22.997416020671835,
+                                            ,17.829457364341085,
+                                            ,20.41343669250646,
+                                            ,
+                                    ],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
+                                        'rgba(255, 206, 86, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)'
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                plugins: {
+                                    legend: {
+                                        position: 'right'
+                                    }
+                                }
+                            }
+                        });
+                    });
+                </script>
+</body>
+</html>

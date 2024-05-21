@@ -1,0 +1,37 @@
+<?xml version="1.0" ?><?xml-stylesheet type="text/xsl" href="operaciones.xsl"?><Smartphones>
+    <Estados nombre="New York">
+        <Inscritos>600</Inscritos>
+        <Samsung>100</Samsung>
+        <Apple>120</Apple>
+        <Xiaomi>180</Xiaomi>
+        <Sin_preferencias>200</Sin_preferencias>
+    </Estados>
+    <Estados nombre="Arizona">
+        <Inscritos>900</Inscritos>
+        <Samsung>300</Samsung>
+        <Apple>110</Apple>
+        <Xiaomi>120</Xiaomi>
+        <Sin_preferencias>180</Sin_preferencias>
+    </Estados>
+    <Estados nombre="Nuevo México">
+        <Inscritos>890</Inscritos>
+        <Samsung>130</Samsung>
+        <Apple>200</Apple>
+        <Xiaomi>380</Xiaomi>
+        <Sin_preferencias>130</Sin_preferencias>
+    </Estados>
+    <Estados nombre="Florida">
+        <Inscritos>690</Inscritos>
+        <Samsung>140</Samsung>
+        <Apple>108</Apple>
+        <Xiaomi>130</Xiaomi>
+        <Sin_preferencias>120</Sin_preferencias>
+    </Estados>
+    <Estados nombre="Texas">
+        <Inscritos>790</Inscritos>
+        <Samsung>110</Samsung>
+        <Apple>112</Apple>
+        <Xiaomi>180</Xiaomi>
+        <Sin_preferencias>105</Sin_preferencias>
+    </Estados>
+</Smartphones>

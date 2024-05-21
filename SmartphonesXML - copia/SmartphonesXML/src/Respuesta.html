@@ -1,0 +1,129 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>   Resultados de Compras   </title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #009879;
+    }
+
+    table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    table tr:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+    <h2>Ejemplo de gráfico de barras</h2>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <canvas id="myChart"></canvas>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Samsung', 'Apple', 'Xiaomi'],
+        datasets: [{
+          label: 'Total de compras',
+          data: [780, 650, 990],
+          backgroundColor: ['#009879', '#009879', '#009879'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+  <h2>  Resultados de las ventas  </h2>
+  <h2>  Total de ventas  </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>    Samsung   </th>
+        <th>    Apple   </th>
+        <th>    Xiaomi   </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>    780     </td>
+        <td>    650     </td>
+        <td>    990     </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>  Porcentaje de participación</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>    Estado    </th>
+        <th>    Porcentaje de compra (%)    </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>    Nueva York    </td>
+        <td>    100    </td>
+      </tr>
+      <tr>
+        <td>    Arizona   </td>
+        <td>    78.89   </td>
+      </tr>
+      <tr>
+        <td>    Nuevo México   </td>
+        <td>    94.38   </td>
+      </tr>
+      <tr>
+        <td>    Florida  </td>
+        <td>    72.17  </td>
+      </tr>
+      <tr>
+        <td>    Texas   </td>
+        <td>    64.18  </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>  Estados con mayor (%) de compra </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>    Estados    </th>
+        <th>    (%) de compra  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>    Nueva York   </td>
+        <td>    100   </td>
+      </tr>
+      <tr>
+        <td>    Nuevo México    </td>
+        <td>    94.38  </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
